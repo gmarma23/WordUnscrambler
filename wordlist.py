@@ -46,4 +46,8 @@ class Wordlist():
             return
 
     def get_results(self, signature):
-        return self.__mapped_wordlist[signature]
+        signature = str(signature)
+        if signature in self.__mapped_wordlist:
+            return self.__mapped_wordlist[signature]
+        else:
+            return []
