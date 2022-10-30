@@ -8,13 +8,13 @@ class Wordlist():
     DEFAULT_MAPPED_DIR = os.path.join(ROOT_DIR, 'wordlists', 'mapped')
     DEFAULT_MAPPED_WORDLIST = os.path.join(DEFAULT_MAPPED_DIR, 'english wordlist.json')
     
-    def __init__(self, mapped_wordlist=None):
-        self.__mapped_wordlist = self.DEFAULT_MAPPED_WORDLIST
+    def __init__(self, custom_mapped_wordlist=None):
+        self.__mapped_wordlist = {}
+        self.__load_mapped_wordlist(custom_mapped_wordlist)
     
     @staticmethod
     def map_plain_wordlist(path_to_txt, valid_chars=None):
         mapped_wordlist = {}
-        c = 0
         try:
             with open(path_to_txt, 'r') as file:
                 while (line := file.readline().rstrip()):
@@ -24,9 +24,8 @@ class Wordlist():
                         mapped_wordlist[signature].append(line)
                     else:
                         mapped_wordlist[signature] = [line] 
-                    c += 1
         except FileNotFoundError:
-            print('Invalid path to txt file')
+            print('Invalid path to plain wordlist')
             return
         except (InvalidChar, EmptyValidCharlist) as e:
             print(str(e))
@@ -36,3 +35,15 @@ class Wordlist():
         filename = full_filename.split('\\')[-1]
         with open(os.path.join(Wordlist.DEFAULT_MAPPED_DIR, f'{filename}.json'), 'w') as file:
             json.dump(mapped_wordlist, file)
+
+    def __load_mapped_wordlist(self, custom_mapped_wordlist):
+        mapped_wordlist_location = custom_mapped_wordlist if custom_mapped_wordlist else self.DEFAULT_MAPPED_WORDLIST
+        try:
+            with open(mapped_wordlist_location, 'r') as file:
+                self.__mapped_wordlist = json.load(file)
+        except FileNotFoundError:
+            print('Invalid path to mapped wordlist')
+            return
+
+    def get_results(self, signature):
+        return self.__mapped_wordlist[signature]
