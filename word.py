@@ -32,7 +32,6 @@ class Word():
 
     def __vector_to_int(self):
         for i,n in enumerate(self.__vector):
-            print(self.__int_signature)
             self.__int_signature += n*(2**(4*i))
 
     def get_int_signature(self):
