@@ -1,6 +1,7 @@
 import json
-
+import os
 
 class Wordlist():
-    def __init__(self, lst=None, file=None):
-        pass
+    ROOT_DIR = os.path.dirname(os.path.realpath(__file__))
+    def __init__(self, file=None):
+        pass 

@@ -10,9 +10,6 @@ class Word():
         self.__set_charlist(charlist)
         self.__vector = [0 for _ in self.__valid_chars]
         
-        self.__charlist_to_vector()
-        self.__vector_to_int()
-
     def __set_valid_chars(self, valid_chars):
         if not valid_chars:
             self.__valid_chars = self.DEFAULT_VALID_CHARS
@@ -39,6 +36,8 @@ class Word():
             self.__int_signature += n*(2**(4*i))
 
     def get_int_signature(self):
+        self.__charlist_to_vector()
+        self.__vector_to_int()
         return self.__int_signature
 
 
