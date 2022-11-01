@@ -8,6 +8,8 @@ class WordUnscrambler():
     DEFAULT_OUTPUT_PATH = os.path.join(Wordlist.ROOT_DIR, 'output')
 
     def __init__(self, custom_mapped_wordlist=None, valid_chars=None):
+        if bool(custom_mapped_wordlist) ^ bool(valid_chars):
+            raise CustomizationError()
         self.__mapped_wordlist = Wordlist(custom_mapped_wordlist)
         self.__valid_chars = valid_chars
 
@@ -53,3 +55,12 @@ class WordUnscrambler():
             for chars, words in results:
                 line = f'{chars} --> {words}\n'
                 file.write(line)
+
+
+class CustomizationError(Exception):
+    def __init__(self):            
+        super().__init__(
+            'Custom mapped wordlist and valid char list should both\n' + \
+            'be defined accordingly or be left to their default values\n' + \
+            '(Custom valid char list set forms all words in provided mapped wordlist)'
+        )
