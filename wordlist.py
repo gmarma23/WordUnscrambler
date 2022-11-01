@@ -51,3 +51,6 @@ class Wordlist():
             return self.__mapped_wordlist[signature]
         else:
             return []
+
+
+map_plain_wordlist = Wordlist.map_plain_wordlist
