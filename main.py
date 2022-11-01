@@ -1,4 +1,4 @@
-from word_unscrambler import WordUnscrambler
+from word_unscrambler import WordUnscrambler, CustomizationError
 from wordlist import map_plain_wordlist
 import argparse
 
@@ -38,32 +38,46 @@ def parse_args():
         help='path of plain wordlist text file'
     )
 
-    arg_parser.add_argument(
-        '-v', '--validchars', 
-        action='store', 
-        type=str, 
-        help='string of custom valid chars'
-    )
-    arg_parser.add_argument(
-        '-m', '--mappedwordlist', 
-        action='store', 
-        type=str, 
-        help='path of custom mapped wordlist'
-    )
+    for subparser in [charlist_parser, file_parser]:
+        subparser.add_argument(
+            '-m', '--mappedwordlist', 
+            action='store', 
+            type=str, 
+            default=None,
+            help='path of custom mapped wordlist'
+        )
+
+    for subparser in [charlist_parser, file_parser, map_parser]:
+        subparser.add_argument(
+            '-v', '--validchars', 
+            action='store', 
+            type=str, 
+            help='string of custom valid chars'
+        )
 
     return arg_parser.parse_args()
 
 
-if __name__ == '__main__':
+def main():
     args = parse_args()
 
-    if args.command == 'map':
+    if len(vars(args)) == 1:
+        return
+    elif args.command == 'map':
         map_plain_wordlist(args.wordlist, args.validchars)
     else:
-        unscrambler = WordUnscrambler(args.mappedwordlist, args.validchars)
+        try:
+            unscrambler = WordUnscrambler(args.mappedwordlist, args.validchars)
+        except CustomizationError as e:
+            print(str(e))
+            return
         if args.command == 'charlist':
             result = unscrambler.unscramble_word(args.chars)
             print('\n', result, '\n')
         elif args.command == 'file':
             unscrambler.unscramble_words(args.path)
+
+
+if __name__ == '__main__':
+    main()
         
