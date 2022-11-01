@@ -17,7 +17,7 @@ class Word():
         self.__vector = [0 for _ in self.__valid_chars]
         
     def __set_valid_chars(self, valid_chars):
-        # Char set that forms all words in provided wordlist
+        # Valid char set generates all words in provided wordlist
         if not valid_chars:
             # no custom valid chars were provided
             self.__valid_chars = self.DEFAULT_VALID_CHARS

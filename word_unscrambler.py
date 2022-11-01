@@ -60,7 +60,6 @@ class WordUnscrambler():
 class CustomizationError(Exception):
     def __init__(self):            
         super().__init__(
-            'Custom mapped wordlist and valid char list should both\n' + \
-            'be defined accordingly or be left to their default values\n' + \
-            '(Custom valid char list set forms all words in provided mapped wordlist)'
+            'Define both custom mapped wordlist and valid char set or leave defaults\n' + \
+            '(Custom valid char set generates all words in provided mapped wordlist)'
         )
