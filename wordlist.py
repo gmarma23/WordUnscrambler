@@ -22,7 +22,11 @@ class Wordlist():
             with open(path_to_txt, 'r') as file:
                 # Parse file line by line
                 while (line := file.readline().rstrip()):
-                    word = Word(line, valid_chars)
+                    try:
+                        word = Word(line, valid_chars)
+                    except InvalidChar:
+                        # Skip words that contain invalid chars
+                        continue
                     signature = word.get_int_signature()
                     if signature in mapped_wordlist.keys():
                         # Signature already exists in dictionary, 
@@ -34,7 +38,7 @@ class Wordlist():
         except FileNotFoundError:
             print('Invalid path to plain wordlist')
             return
-        except (InvalidChar, EmptyValidCharlist) as e:
+        except EmptyValidCharlist as e:
             print(str(e))
             return
 
