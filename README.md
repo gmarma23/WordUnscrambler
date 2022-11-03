@@ -1,6 +1,10 @@
 # Word Unscrambler
-A simple python script to unscramble strings of chars and form derived words.
+A simple python project to unscramble strings of chars and form derived words. 
+
+###### CORE 
+Encode char string to vector based on number of occurrences of each char, resulting in permutations of the same chars having identical vectors. 
 
 ## Usage
 Run `main.py` and use:
+
 1.'charlist' option to unscramble a single string of chars provided to the program by parameter `-c` or `--chars`. Additionally parameters `-m` or `--mapedwordlist` and `-v` or `--validchars` can be used in case of use of a custom mapped wordlist. 
