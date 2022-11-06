@@ -14,11 +14,17 @@ Default valid chars: `abcdefghijklmnopqrstuvwxyz-`
 ## How to Use
 Run `main.py` and use:
 
-1. `charlist` option to unscramble a single string of chars provided to the program with parameter `-c` (or `--chars`). Additionally parameters `-m` (or `--mapedwordlist`) and `-v` (or `--validchars`) can be used in case of use of a custom mapped wordlist. 
+1. `charlist` option to unscramble a single string of chars provided to the program with parameter `-c` (or `--chars`). Additionally parameters `-m` (or `--mapedwordlist`) and `-v` (or `--validchars`) can be used in case of use of a custom mapped wordlist. <br/>
 
-2. `file` option to unscramble a multiple strings of chars, one for each line in provided file, with parameter `-p` (or `--path`) for input file path. Additionally parameters `-m` (or `--mapedwordlist`) and `-v` (or `--validchars`) can be used in case of use of a custom mapped wordlist. 
+Example: `main.py charlist -c "odg"` should return ['dog', 'god']
 
-3. `map` option to transform a plain txt wordlist file to a mapped dictionary format and export it as json with parameter `-w` (or `--wordlist`). Additionally parameter `-v` (or `--validchars`) can be used to ensure that all words in resulting dictionary are derived by combinations of provided valid characters.
+2. `file` option to unscramble a multiple strings of chars, one for each line in provided file, with parameter `-p` (or `--path`) for input file path. Additionally parameters `-m` (or `--mapedwordlist`) and `-v` (or `--validchars`) can be used in case of use of a custom mapped wordlist. <br/>
+
+Example: `main.py file -p "%path/to/input/txt/file%"`
+
+3. `map` option to transform a plain txt wordlist file to a mapped dictionary format and export it as json with parameter `-w` (or `--wordlist`). Additionally parameter `-v` (or `--validchars`) can be used to ensure that all words in resulting dictionary are derived by combinations of provided valid characters. <br/>
+
+Example: `main.py map -w "%path/to/wordlist/txt/file%"`
 
 When using a custom mapped wordlist with parameter `-m` (or `--mapedwordlist`), parameter `-v` (or `--validchars`) should also be used to overwrite default valid characters. Using these parameters separately is likely to cause errors.
  
