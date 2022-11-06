@@ -8,6 +8,7 @@ Use a plain txt wordlist file and transform it to a dictionary with integer-sign
 Whenever a char string needs to be unscrambled simply get it's integer-signature and search in already mapped wordlist for that integer-signature (dictionary key) and return results list (dictionary value).
 
 Default wordlist txt file `english words.txt` can be found in `%project_dir%/wordlists/plain/` directory <br/> 
+Default mapped wordlist dictionary file `english words.json` can be found in `%project_dir%/wordlists/mapped/` directory <br/> 
 Default valid chars: `abcdefghijklmnopqrstuvwxyz-`
 
 ## How to Use
@@ -19,5 +20,5 @@ Run `main.py` and use:
 
 3. `map` option to transform a plain txt wordlist file to a mapped dictionary format and export it as json with parameter `-w` (or `--wordlist`). Additionally parameter `-v` (or `--validchars`) can be used to ensure that all words in resulting dictionary are derived by combinations of provided valid characters.
 
-When using a custom mapped wordlist with parameter `-m` or (`--mapedwordlist`), parameter `-v` (or `--validchars`) should also be used to overwrite default valid characters. Using these parameters separately is likely to cause errors.
+When using a custom mapped wordlist with parameter `-m` (or `--mapedwordlist`), parameter `-v` (or `--validchars`) should also be used to overwrite default valid characters. Using these parameters separately is likely to cause errors.
  
