@@ -14,9 +14,9 @@ Default valid chars: `abcdefghijklmnopqrstuvwxyz-`
 ## How to Use
 Run `main.py` and use:
 
-1. `charlist` option to unscramble a single string of chars provided to the program with parameter `-c` (or `--chars`). Additionally parameters `-m` or (`--mapedwordlist`) and `-v` (or `--validchars`) can be used in case of use of a custom mapped wordlist. 
+1. `charlist` option to unscramble a single string of chars provided to the program with parameter `-c` (or `--chars`). Additionally parameters `-m` (or `--mapedwordlist`) and `-v` (or `--validchars`) can be used in case of use of a custom mapped wordlist. 
 
-2. `file` option to unscramble a multiple strings of chars, one for each line in provided file, with parameter `-p` (or `--path`) for input file path. Additionally parameters `-m` or (`--mapedwordlist`) and `-v` (or `--validchars`) can be used in case of use of a custom mapped wordlist. 
+2. `file` option to unscramble a multiple strings of chars, one for each line in provided file, with parameter `-p` (or `--path`) for input file path. Additionally parameters `-m` (or `--mapedwordlist`) and `-v` (or `--validchars`) can be used in case of use of a custom mapped wordlist. 
 
 3. `map` option to transform a plain txt wordlist file to a mapped dictionary format and export it as json with parameter `-w` (or `--wordlist`). Additionally parameter `-v` (or `--validchars`) can be used to ensure that all words in resulting dictionary are derived by combinations of provided valid characters.
 
