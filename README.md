@@ -7,7 +7,7 @@ Use a plain txt wordlist file and transform it to a dictionary with integer-sign
 
 Whenever a char string needs to be unscrambled simply get it's integer-signature and search in already mapped wordlist for that integer-signature (dictionary key) and return results list (dictionary value).
 
-Default wordlist txt file `english words.txt` can be found in %project_dir%/wordlists/plain/ directory\n
+Default wordlist txt file `english words.txt` can be found in %project_dir%/wordlists/plain/ directory <br/>
 Default valid chars: `abcdefghijklmnopqrstuvwxyz-`
 
 ## How to Use
