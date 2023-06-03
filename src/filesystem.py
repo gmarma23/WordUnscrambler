@@ -1,7 +1,7 @@
 from pathlib import Path
 
 class Filesystem():
-    __ROOT_DIR = Path(__file__).parent
+    __ROOT_DIR = Path(__file__).parents[1]
     __DEFAULT_MAPPED_DIR = __ROOT_DIR / 'wordlists' / 'mapped'
     __DEFAULT_OUTPUT_PATH = __ROOT_DIR / 'output'
 
