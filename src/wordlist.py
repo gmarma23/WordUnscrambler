@@ -45,7 +45,7 @@ class Wordlist():
                         mapped_wordlist[signature] = [line] 
         except FileNotFoundError:
             print('Invalid path to provided wordlist txt file')
-            return
+            exit()
 
         # Extract filename from given wordlist txt file path
         wordlist_filename = Filesystem.get_filename_stem(wordlist_path)
@@ -79,6 +79,6 @@ class Wordlist():
                 self.__mapped_wordlist = json.load(file)
         except FileNotFoundError:
             print('Invalid path to default mapped wordlist')
-            return
+            exit()
         
         self.__valid_chars = self.__mapped_wordlist['valid_chars']

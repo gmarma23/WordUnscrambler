@@ -24,7 +24,7 @@ class WordUnscrambler():
                     word = Word(charlist_subset_str, self.__mapped_wordlist.valid_chars)
                 except InvalidChar as e:
                     print(str(e))
-                    return
+                    exit()
                 
                 signature = word.int_signature
                 if signature in charlist_subset_signatures:
@@ -51,7 +51,7 @@ class WordUnscrambler():
                     results.append((line, self.unscramble_word(line, check_charlist_subsets)))
         except FileNotFoundError:
             print('Invalid path to input file')
-            return
+            exit()
 
         filename = Filesystem.get_filename_stem(input_file_path)
         file_suffix = Filesystem.get_filename_suffix(input_file_path)
