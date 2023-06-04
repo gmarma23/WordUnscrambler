@@ -4,7 +4,7 @@ import json
 
 
 class Wordlist():
-    __DEFAULT_MAPPED_WORDLIST_PATH = Filesystem.get_mapped_wordlist_path('english wordlist.json') 
+    __DEFAULT_MAPPED_WORDLIST_PATH = Filesystem.get_mapped_wordlist_path('english_wordlist.json') 
     
 
     def __init__(self, custom_mapped_wordlist_path: str='') -> None:
@@ -41,7 +41,7 @@ class Wordlist():
                         # Create new key, value entry in dictionary
                         mapped_wordlist[signature] = [line] 
         except FileNotFoundError:
-            print('Invalid path to wordlist txt file')
+            print('Invalid path to provided wordlist txt file')
             return
 
         # Extract filename from given wordlist txt file path
@@ -75,7 +75,7 @@ class Wordlist():
             with open(mapped_wordlist_path, 'r') as file:
                 self.__mapped_wordlist = json.load(file)
         except FileNotFoundError:
-            print('Invalid path to mapped wordlist')
+            print('Invalid path to default mapped wordlist')
             return
         
         self.__valid_chars = self.__mapped_wordlist['valid_chars']
