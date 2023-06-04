@@ -4,7 +4,7 @@ import json
 
 
 class Wordlist():
-    __DEFAULT_MAPPED_WORDLIST_PATH = Filesystem.get_mapped_wordlist_path('english_wordlist.json') 
+    __DEFAULT_MAPPED_WORDLIST_PATH = Filesystem.get_mapped_wordlist_path('english_wordlist_simple.json') 
     
 
     def __init__(self, custom_mapped_wordlist_path: str='') -> None:
