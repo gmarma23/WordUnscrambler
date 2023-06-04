@@ -36,6 +36,9 @@ class Wordlist():
                     signature = word.int_signature
                     if signature in mapped_wordlist.keys():
                         # Signature already exists in dictionary
+                        if line in mapped_wordlist[signature]:
+                            # Word already exists in dictionary (duplicate words)
+                            continue
                         mapped_wordlist[signature].append(line)
                     else:
                         # Create new key, value entry in dictionary
