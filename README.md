@@ -3,7 +3,7 @@ Unscramble provided character strings to form derived words
 
 ## Core Implementation
 
-A character string is encoded to a vector holding the number of occurrences of each char, resulting in permutations of the same characters having identical vectors. Then the vector is mapped to a unique signature-integer using an injective function approctimation. Distinct integers corespond to distinct vectors and vice versa. 
+A character string is encoded as a vector holding the number of occurrences of each char, resulting in permutations of the same characters having identical vectors. Then the vector is mapped to a unique signature-integer using an injective function approctimation. Distinct integers corespond to distinct vectors and vice versa. 
 
 A plain txt wordlist file is used to generate a json dictionary with integer-signatures as keys and the list of words from the initial wordlist that have the same integer-signature as value of that key. This action is performed only once for each plain wordlist and the resulting mapped wordlist can be used multiple times from now on.
 
