@@ -39,3 +39,5 @@ python main.py unscramble -c "ogd" -s<br/>
 og --> ['go']<br/>
 od --> ['do']<br/>
 ogd --> ['dog', 'god']<br/><br/>
+
+python main.py map -w "%path_to_plain_txt_wordlist%" -v "abcdefghijklmnopqrstuvwxyz-"<br/>
