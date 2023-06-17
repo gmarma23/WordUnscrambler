@@ -26,12 +26,12 @@ Additionally:<br/><br/>
 
 Examples: <br/>
 
-1. python main.py unscramble -c "ogd"
-   Result:
-           ogd --> ['dog', 'god']
+1. python main.py unscramble -c "ogd"<br/>
+   Result:<br/>
+           ogd --> ['dog', 'god']<br/><br/>
 
-2. python main.py unscramble -c "ogd" -s
-   Result:
-          og --> ['go']
-          od --> ['do']
-          ogd --> ['dog', 'god']
+2. python main.py unscramble -c "ogd" -s<br/>
+   Result:<br/>
+          og --> ['go']<br/>
+          od --> ['do']<br/>
+          ogd --> ['dog', 'god']<br/>
