@@ -24,13 +24,13 @@ Additionally:<br/><br/>
   - Use `--subsets` (or `-s`) argument to unscramble all subsets of provided character string as well.<br/>
   - Use `--wordlist` (or `-w`) argument to provide a path to a custom mapped wordlist.<br/> 
 
-## Examples
+Examples:<br/>
   
-- python main.py unscramble -c "ogd"<br/>
+python main.py unscramble -c "ogd"<br/>
 
 ogd --> ['dog', 'god']<br/><br/>
   
-- python main.py unscramble -c "ogd" -s<br/>
+python main.py unscramble -c "ogd" -s<br/>
   
 og --> ['go']<br/>
 od --> ['do']<br/>
