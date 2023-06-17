@@ -25,3 +25,5 @@ Additionally:<br/><br/>
   - Use `--wordlist` (or `-w`) argument to provide a path to a custom mapped wordlist.<br/> 
 
 Examples: <br/>
+![Screenshot 2023-06-17 180909](https://github.com/gmarma23/WordUnscrambler/assets/100040302/eab5b70d-6a2b-4a9a-b334-cd7d78a64464)
+![Screenshot 2023-06-17 181018](https://github.com/gmarma23/WordUnscrambler/assets/100040302/8127a6f0-0fbc-4f21-9967-9eabd0132c1c)
