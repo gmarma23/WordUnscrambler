@@ -43,11 +43,8 @@ class WordUnscrambler():
         results = []
 
         try:
-            # Read input file entries 
             with open(input_file_path, 'r') as file:
-                # Parse file line by line
                 while line := file.readline().rstrip():
-                    # Append tuple (charlist, words) in results list
                     results.append((line, self.unscramble_word(line, check_charlist_subsets)))
         except FileNotFoundError:
             print('Invalid path to input file')
@@ -57,7 +54,6 @@ class WordUnscrambler():
         file_suffix = Filesystem.get_filename_suffix(input_file_path)
         output_path = Filesystem.get_output_file_path(f'{filename}_unscrambled{file_suffix}')
 
-        # Export results in txt file
         with open(output_path, 'w') as file:
             for chars, result in results:
                 block_title = f"{chars}\n{len(chars)*'='}\n"
@@ -71,6 +67,8 @@ class WordUnscrambler():
     
 
     def print_single_word_results(self, result: dict[str, list[str]]) -> None:
+        """Output unscrambled word result dictionary in terminal"""
+
         for chars_subset, matches in result.items():
             result_line = f'\t{chars_subset} --> {matches}\n'
             print(result_line, end='')
