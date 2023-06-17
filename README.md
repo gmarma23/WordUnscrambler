@@ -11,7 +11,7 @@ Whenever a character string needs to be unscrambled, firstly it's integer-signat
 corresponding dictionary value is then returned as the results list, populated with derived words.
 
 Two already mapped wordlists can be found in `%project_dir%/wordlists/mapped/` directory: <br/> 
-  - english_wordlist_simple.json (DEFAULT WORDLIST)<br/>
+  - english_wordlist_simple.json (DEFAULT MAPPED WORDLIST)<br/>
   - english_wordlist_complex.json
 
 ## How to Use
