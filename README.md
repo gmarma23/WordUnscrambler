@@ -19,7 +19,7 @@ Run `main.py` and use:
 
 1. `unscramble` option to unscramble character strings.<br/>
   - Use `--chars` (or `-c`) argument to provide a single character string.<br/>
-  - Use `--file` (or `-f`) argument to provide multiple character strings via a txt file (one string per line). The results are outputted in a txt file inside `%project_dir%/output/` directory as a txt file named `%initial_filename%_unscrambled.txt`.<br/><br/>
+  - Use `--file` (or `-f`) argument to provide multiple character strings via a txt file (one string per line). The results are outputted inside `%project_dir%/output/` directory as a txt file named `%initial_filename%_unscrambled.txt`.<br/><br/>
 Additionally:<br/><br/>
   - Use `--subsets` (or `-s`) argument to unscramble all subsets of provided character string as well.<br/>
   - Use `--wordlist` (or `-w`) argument to provide a path to a custom mapped wordlist. If a custom mapped wordlist is not provided then default english_wordlist_simple.json will be used.<br/><br/>
