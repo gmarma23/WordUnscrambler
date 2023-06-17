@@ -22,7 +22,7 @@ Run `main.py` and use:
   - Use `--file` (or `-f`) argument to provide multiple character strings via a txt file (one string per line).<br/><br/>
 Additionally:<br/><br/>
   - Use `--subsets` (or `-s`) argument to unscramble all subsets of provided character string as well.<br/>
-  - Use `--wordlist` (or `-w`) argument to provide a path to a custom mapped wordlist. If a custom mapped wordlist is not provided then default english_wordlist_simple.json will be used.<br/>
+  - Use `--wordlist` (or `-w`) argument to provide a path to a custom mapped wordlist. If a custom mapped wordlist is not provided then default english_wordlist_simple.json will be used.<br/><br/>
 
 2. `map` option to generate a custom mapped wordlist.<br/>
   - Use `--wordlist` (or `-w`) argument to specify the path to a plain txt wordlist file.<br/>
