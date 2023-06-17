@@ -40,6 +40,6 @@ og --> ['go']<br/>
 od --> ['do']<br/>
 ogd --> ['dog', 'god']<br/><br/>
 
-python main.py unscramble -f "%path_to_input_txt_file"<br/><br/>
+python main.py unscramble -f "%path_to_input_txt_file%"<br/><br/>
 
 python main.py map -w "%path_to_plain_txt_wordlist%" -v "abcdefghijklmnopqrstuvwxyz-"<br/>
