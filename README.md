@@ -18,9 +18,9 @@ Two already mapped wordlists can be found in `%project_dir%/wordlists/mapped/` d
 Run `main.py` and use:
 
 1. `unscramble` option to unscramble character strings.<br/><br/>
-  -  Use `--chars` (or `-c`) argument to provide a single character string.<br/>
+  - Use `--chars` (or `-c`) argument to provide a single character string.<br/>
   - Use `--file` (or `-f`) argument to provide multiple character strings via a txt file (one string per line).<br/><br/>
-  - Additionally:<br/><br/>
+  Additionally:<br/><br/>
   - Use `--subsets` (or `-s`) argument to unscramble all subsets of provided character string as well.<br/>
   - Use `--wordlist` (or `-w`) argument to provide a path to a custom mapped wordlist.<br/> 
 
